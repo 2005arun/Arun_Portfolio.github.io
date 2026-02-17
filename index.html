@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arun R S | Portfolio</title>
+  <meta name="description" content="Arun R S — AI & DS student. Projects in multi-agent systems, cloud, and full-stack development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__text">Arun R S</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="icon-btn nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+          <span class="nav__toggle-lines" aria-hidden="true"></span>
+        </button>
+
+        <div class="nav__panel" data-nav-panel>
+          <a class="nav__link" href="#about">About</a>
+          <a class="nav__link" href="#experience">Internship</a>
+          <a class="nav__link" href="#projects">Projects</a>
+          <a class="nav__link" href="#skills">Skills</a>
+          <a class="nav__link" href="#achievements">Achievements</a>
+          <a class="nav__link" href="#contact">Contact</a>
+
+          <button class="icon-btn nav__theme" type="button" aria-label="Toggle theme" data-theme-toggle>
+            <span class="theme-indicator" aria-hidden="true"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-label="Introduction">
+      <div class="container">
+        <div class="hero__subbar" aria-label="Quick links" data-reveal>
+          <a class="chip chip--sm" href="https://drive.google.com/file/d/1ts2iBk1m7m173A_hzLv0_o30cpVn0ftV/view?usp=sharing" target="_blank" rel="noreferrer">Self_Intro</a>
+          <a class="chip chip--sm" href="https://drive.google.com/file/d/1iwoinG3kRAPoesScJAiuq1gtkKuDg-pf/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
+          <a class="chip chip--sm" href="https://github.com/2005arun" data-ext-link="github">GitHub</a>
+          <a class="chip chip--sm" href="https://www.linkedin.com/in/arun-r-s19102005" data-ext-link="linkedin">LinkedIn</a>
+        </div>
+
+        <div class="hero__grid">
+          <div class="hero__left" data-reveal>
+            <h2 class="hero__title">Software Developer With Collaboration of AI </h2>
+          <p class="hero__subtitle">I’m Arun R S — I build practical, high‑impact systems spanning multi-agent workflows, generative AI, and production-ready web apps.</p>
+
+          <div class="quick" aria-label="Quick info">
+            <button class="chip" type="button" data-copy value="6374475344" data-copy-label="Phone">Phone: 6374475344</button>
+            <button class="chip" type="button" data-copy value="arunramamoorthi05@gmail.com" data-copy-label="Email">Email: arunramamoorthi05@gmail.com</button>
+          </div>
+
+          <div class="stats" aria-label="Competitive programming stats">
+            <div class="stat" data-reveal>
+              <div class="stat__value">800+</div>
+              <div class="stat__label">LeetCode solved (1700+)</div>
+            </div>
+            <div class="stat" data-reveal>
+              <div class="stat__value">100+</div>
+              <div class="stat__label">Codeforces solved (1040)</div>
+            </div>
+            <div class="stat" data-reveal>
+              <div class="stat__value">400+</div>
+              <div class="stat__label">GFG solved (Rank 3)</div>
+            </div>
+          </div>
+          </div>
+
+          <aside class="hero__right" data-reveal>
+          <div class="card profile">
+            <div class="profile__top">
+              <div class="avatar" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 21a8 8 0 1 0-16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <p class="profile__name">Arun R S</p>
+                <p class="profile__role">Software Developer</p>
+              </div>
+            </div>
+
+            <div class="profile__facts">
+              <div class="fact">
+                <span class="fact__k">College</span>
+                <span class="fact__v">Sri Eshwar College of Engineering</span>
+              </div>
+              <div class="fact">
+                <span class="fact__k">CGPA</span>
+                <span class="fact__v">7.79 (up to 4th semester)</span>
+              </div>
+              <div class="fact">
+                <span class="fact__k">Focus</span>
+                <span class="fact__v">Software Development • Agents • GenAI</span>
+              </div>
+            </div>
+
+            <div class="profile__actions">
+              <a class="btn btn--primary btn--block" href="#contact">Let’s work together</a>
+              <a class="btn btn--ghost btn--block" href="#projects">Explore work</a>
+            </div>
+          </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <h2 class="section__title">About</h2>
+        </div>
+
+        <div class="grid-2">
+          <div class="card" data-reveal>
+            <p class="muted">Pre-final year AI & DS student focused on building clean, fast, and scalable products. I ship full‑stack apps, multi‑agent workflows, and applied AI features with strong DSA fundamentals.</p>
+          </div>
+
+          <div class="card" data-reveal>
+            <h3 class="card__title">What I’m good at</h3>
+            <div class="list">
+              <div class="list__item"><span class="dot" aria-hidden="true"></span><span>Building full-stack apps with authentication and APIs</span></div>
+              <div class="list__item"><span class="dot" aria-hidden="true"></span><span>Multi-agent workflows (Planner/Architect/Coder patterns)</span></div>
+              <div class="list__item"><span class="dot" aria-hidden="true"></span><span>Cloud fundamentals (S3, VPC, EC2, CloudWatch)</span></div>
+              <div class="list__item"><span class="dot" aria-hidden="true"></span><span>Applied ML/CV/NLP pipelines for real-time systems</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <h2 class="section__title">Internship</h2>
+          <p class="section__subtitle">Hands-on cloud experience.</p>
+        </div>
+
+        <article class="card" data-reveal>
+          <div class="row">
+            <div>
+              <h3 class="card__title">Cloud Internship | AWS Academy</h3>
+              <p class="muted">2025</p>
+            </div>
+            <span class="pill">Cloud</span>
+          </div>
+
+          <p class="muted">Completed a hands-on cloud computing internship, gaining practical experience in deploying and managing cloud infrastructure. Worked with AWS S3 for scalable storage and configured VPCs for secure network architecture. Built a strong understanding of resource management and best practices.</p>
+
+          <div class="tag-row" aria-label="Key skills">
+            <span class="pill">AWS S3</span>
+            <span class="pill">VPC</span>
+            <span class="pill">EC2</span>
+            <span class="pill">CloudWatch</span>
+            <span class="pill">Resource Management</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <h2 class="section__title">Projects</h2>
+        </div>
+
+        <div class="toolbar" data-reveal>
+          <div class="filters" role="tablist" aria-label="Project filters">
+            <button class="filter is-active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter" type="button" data-filter="fullstack" role="tab" aria-selected="false">Full‑Stack</button>
+            <button class="filter" type="button" data-filter="agents" role="tab" aria-selected="false">Agents</button>
+            <button class="filter" type="button" data-filter="ai" role="tab" aria-selected="false">AI</button>
+            <button class="filter" type="button" data-filter="systems" role="tab" aria-selected="false">Systems</button>
+          </div>
+        </div>
+
+        <div class="cards" data-projects>
+          <article class="card project" data-reveal data-tags="fullstack">
+            <div class="project__top">
+              <h3 class="card__title">Netify | Movie Streaming Website</h3>
+              <span class="pill">2025</span>
+            </div>
+            <p class="muted">Netflix clone featuring authentication, dynamic browsing, and personalized content. Integrated TMDB for real-time movie data and Firebase email-password auth.</p>
+            <div class="tag-row">
+              <span class="pill">React</span>
+              <span class="pill">Styled Components</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Express</span>
+              <span class="pill">MongoDB</span>
+              <span class="pill">Firebase</span>
+              <span class="pill">TMDB API</span>
+            </div>
+            <div class="project__actions">
+              <a class="btn btn--ghost" href="https://github.com/2005arun/Netify.git" data-project-link="netify">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card project" data-reveal data-tags="agents ai">
+            <div class="project__top">
+              <h3 class="card__title">AutoSiteGen | Multi‑Agent Website Creator</h3>
+              <span class="pill">2025</span>
+            </div>
+            <p class="muted">Developed an AI-powered website generation system using a multi-agent architecture where specialized agents (Planner, Architect, and Coder) collaboratively convert user prompts into fully functional websites.</p>
+            <div class="tag-row">
+              <span class="pill">LangGraph</span>
+              <span class="pill">OpenAI GPT Models</span>
+              <span class="pill">Python</span>
+              <span class="pill">React</span>
+              <span class="pill">HTML</span>
+              <span class="pill">CSS</span>
+              <span class="pill">JavaScript</span>
+            </div>
+            <div class="project__actions">
+              <a class="btn btn--ghost" href="https://github.com/2005arun/Autositegen" data-project-link="autositegen">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card project" data-reveal data-tags="ai agents">
+            <div class="project__top">
+              <h3 class="card__title">EmotionSense | Multi‑Modal AI Emotion‑to‑Music Generator</h3>
+              <span class="pill">2025</span>
+            </div>
+            <p class="muted">Detects user emotions through facial expressions, voice tone, and text sentiment, then generates personalized music using generative models. Includes real-time adaptive agent and interactive UI.</p>
+            <div class="tag-row">
+              <span class="pill">Python</span>
+              <span class="pill">PyTorch</span>
+              <span class="pill">OpenCV</span>
+              <span class="pill">MediaPipe</span>
+              <span class="pill">Transformers</span>
+              <span class="pill">MusicGen</span>
+            </div>
+            <div class="project__actions">
+              <a class="btn btn--ghost" href="https://github.com/2005arun/EmotionSense_AI" data-project-link="emotionsense">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card project" data-reveal data-tags="systems">
+            <div class="project__top">
+              <h3 class="card__title">Multi‑User Chat</h3>
+              <span class="pill">2024</span>
+            </div>
+            <p class="muted">Real-time chat system supporting 10+ concurrent users using TCP/IP sockets and a multi-threaded server-client architecture with &lt;100ms LAN latency.</p>
+            <div class="tag-row">
+              <span class="pill">C++</span>
+              <span class="pill">TCP/IP</span>
+              <span class="pill">Multi‑threading</span>
+              <span class="pill">Linux</span>
+            </div>
+            <div class="project__actions">
+              <a class="btn btn--ghost" href="https://github.com/2005arun/Chat_Application-using-cpp-.git" data-project-link="chat">GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <h2 class="section__title">Skills</h2>
+        </div>
+
+        <div class="skills" data-reveal>
+          <div class="card">
+            <h3 class="card__title">Programming</h3>
+            <div class="tag-row">
+              <span class="pill">C</span><span class="pill">C++</span><span class="pill">Python</span><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Software Development</h3>
+            <div class="tag-row">
+              <span class="pill">DSA</span><span class="pill">OS</span><span class="pill">DBMS</span><span class="pill">CN</span><span class="pill">OOP</span><span class="pill">Cloud Computing</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Artificial Intelligence</h3>
+            <div class="tag-row">
+              <span class="pill">Generative AI</span><span class="pill">AI Agents</span><span class="pill">Language Models</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Databases</h3>
+            <div class="tag-row">
+              <span class="pill">MySQL</span><span class="pill">MongoDB</span><span class="pill">Firebase</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card__title">Tools</h3>
+            <div class="tag-row">
+              <span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">AWS</span><span class="pill">Kaggle</span><span class="pill">Notion</span><span class="pill">PyCharm</span><span class="pill">VS Code</span><span class="pill">Postman</span><span class="pill">Power BI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <h2 class="section__title">Certifications</h2>
+        </div>
+
+        <div class="cards">
+          <article class="card" data-reveal>
+            <h3 class="card__title">SQL | Scalar Academy</h3>
+            <p class="muted">2025</p>
+          </article>
+          <article class="card" data-reveal>
+            <h3 class="card__title">Networking Basics | Cisco Networking Academy</h3>
+            <p class="muted">2024</p>
+          </article>
+          <article class="card" data-reveal>
+            <h3 class="card__title">Mastering Data Structure and Algorithms Using C and C++ | Udemy</h3>
+            <p class="muted">2023</p>
+          </article>
+          <article class="card" data-reveal>
+            <h3 class="card__title">Problem Solving through Programming In C | NPTEL</h3>
+            <p class="muted">2023</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="achievements">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <h2 class="section__title">Achievements</h2>
+          <p class="section__subtitle">Competitive programming and awards.</p>
+        </div>
+
+        <div class="achievements">
+          <div class="cards achievements__grid">
+            <article class="card platform" data-reveal>
+              <div class="platform__head">
+                <div class="platform__brand">
+                  <span class="logo" aria-hidden="true">
+                    <img class="logo__img" src="https://cdn.simpleicons.org/leetcode/FFA116" alt="" />
+                  </span>
+                  <div>
+                    <h3 class="card__title">LeetCode</h3>
+                    <p class="muted">800+ solved • Rating 1800+</p>
+                  </div>
+                </div>
+                <a class="btn btn--ghost" href="https://leetcode.com/u/2005arun/" data-ext-link="leetcode">Profile</a>
+              </div>
+              <div class="cp">
+                <div class="cp__arc" data-arc data-value="800" data-max="1000" data-color="#f59e0b" data-label="Solved">
+                  <svg class="cp__svg" viewBox="0 0 120 120" aria-hidden="true">
+                    <circle class="cp__track" cx="60" cy="60" r="46" />
+                    <circle class="cp__progress" cx="60" cy="60" r="46" />
+                  </svg>
+                  <div class="cp__center">
+                    <div class="cp__label">Solved</div>
+                  </div>
+                </div>
+
+                <div class="cp__stats" aria-label="LeetCode stats">
+                  <div class="cp__stat">
+                    <div class="cp__stat-k">Solved</div>
+                    <div class="cp__stat-v">800+</div>
+                  </div>
+                  <div class="cp__stat">
+                    <div class="cp__stat-k">Rating</div>
+                    <div class="cp__stat-v">1800+</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card platform" data-reveal>
+              <div class="platform__head">
+                <div class="platform__brand">
+                  <span class="logo" aria-hidden="true">
+                    <img class="logo__img" src="https://cdn.simpleicons.org/codeforces/1F8ACB" alt="" />
+                  </span>
+                  <div>
+                    <h3 class="card__title">Codeforces</h3>
+                    <p class="muted">100+ solved • Rating 1040</p>
+                  </div>
+                </div>
+                <a class="btn btn--ghost" href="https://codeforces.com/profile/arun_2005" data-ext-link="codeforces">Profile</a>
+              </div>
+              <div class="cp">
+                <div class="cp__arc" data-arc data-value="100" data-max="300" data-color="#60a5fa" data-label="Solved">
+                  <svg class="cp__svg" viewBox="0 0 120 120" aria-hidden="true">
+                    <circle class="cp__track" cx="60" cy="60" r="46" />
+                    <circle class="cp__progress" cx="60" cy="60" r="46" />
+                  </svg>
+                  <div class="cp__center">
+                    <div class="cp__label">Solved</div>
+                  </div>
+                </div>
+
+                <div class="cp__stats" aria-label="Codeforces stats">
+                  <div class="cp__stat">
+                    <div class="cp__stat-k">Solved</div>
+                    <div class="cp__stat-v">100+</div>
+                  </div>
+                  <div class="cp__stat">
+                    <div class="cp__stat-k">Rating</div>
+                    <div class="cp__stat-v">1040+</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card platform" data-reveal>
+              <div class="platform__head">
+                <div class="platform__brand">
+                  <span class="logo" aria-hidden="true">
+                    <img class="logo__img" src="https://cdn.simpleicons.org/geeksforgeeks/2F8D46" alt="" />
+                  </span>
+                  <div>
+                    <h3 class="card__title">GeeksforGeeks</h3>
+                    <p class="muted">400+ solved • Score 1300+ • Rank 3 (Institution)</p>
+                  </div>
+                </div>
+                <a class="btn btn--ghost" href="https://www.geeksforgeeks.org/profile/arunrs20ujs8?tab=activity" data-ext-link="gfg">Profile</a>
+              </div>
+              <div class="cp">
+                <div class="cp__arc" data-arc data-value="400" data-max="600" data-color="#22c55e" data-label="Solved">
+                  <svg class="cp__svg" viewBox="0 0 120 120" aria-hidden="true">
+                    <circle class="cp__track" cx="60" cy="60" r="46" />
+                    <circle class="cp__progress" cx="60" cy="60" r="46" />
+                  </svg>
+                  <div class="cp__center">
+                    <div class="cp__label">Solved</div>
+                  </div>
+                </div>
+
+                <div class="cp__stats" aria-label="GFG stats">
+                  <div class="cp__stat">
+                    <div class="cp__stat-k">Solved</div>
+                    <div class="cp__stat-v">400+</div>
+                  </div>
+                  <div class="cp__stat">
+                    <div class="cp__stat-k">Rating</div>
+                    <div class="cp__stat-v">1300+</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card platform" data-reveal>
+              <div class="platform__head">
+                <div class="platform__brand">
+                  <span class="logo" aria-hidden="true">
+                    <img class="logo__img" src="https://cdn.simpleicons.org/codechef/5B4638" alt="" />
+                  </span>
+                  <div>
+                    <h3 class="card__title">CodeChef</h3>
+                    <p class="muted">400+ solved • Rating 1515 • 2★</p>
+                  </div>
+                </div>
+                <a class="btn btn--ghost" href="https://www.codechef.com/users/arunrs2023" data-ext-link="codechef">Profile</a>
+              </div>
+              <div class="cp">
+                <div class="cp__arc" data-arc data-value="400" data-max="600" data-color="#f59e0b" data-label="Solved">
+                  <svg class="cp__svg" viewBox="0 0 120 120" aria-hidden="true">
+                    <circle class="cp__track" cx="60" cy="60" r="46" />
+                    <circle class="cp__progress" cx="60" cy="60" r="46" />
+                  </svg>
+                  <div class="cp__center">
+                    <div class="cp__label">Solved</div>
+                  </div>
+                </div>
+
+                <div class="cp__stats" aria-label="CodeChef stats">
+                  <div class="cp__stat">
+                    <div class="cp__stat-k">Solved</div>
+                    <div class="cp__stat-v">400+</div>
+                  </div>
+                  <div class="cp__stat">
+                    <div class="cp__stat-k">Rating</div>
+                    <div class="cp__stat-v">1515+</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card platform" data-reveal>
+              <div class="platform__head">
+                <div class="platform__brand">
+                  <span class="logo" aria-hidden="true">
+                    <img class="logo__img" src="https://cdn.simpleicons.org/hackerrank/00EA64" alt="" />
+                  </span>
+                  <div>
+                    <h3 class="card__title">HackerRank</h3>
+                    <p class="muted">5‑Star in Python and C++</p>
+                  </div>
+                </div>
+                <a class="btn btn--ghost" href="https://www.hackerrank.com/profile/arun_rs2023ai_ds" data-ext-link="hackerrank">Profile</a>
+              </div>
+              <div class="cp">
+                <div class="cp__arc" data-arc data-value="5" data-max="5" data-color="#00ea64" data-label="Stars">
+                  <svg class="cp__svg" viewBox="0 0 120 120" aria-hidden="true">
+                    <circle class="cp__track" cx="60" cy="60" r="46" />
+                    <circle class="cp__progress" cx="60" cy="60" r="46" />
+                  </svg>
+                  <div class="cp__center">
+                    <div class="cp__label">Solved</div>
+                  </div>
+                </div>
+
+                <div class="cp__stats" aria-label="HackerRank stats">
+                  <div class="cp__stat">
+                    <div class="cp__stat-k">Solved</div>
+                    <div class="cp__stat-v">5★</div>
+                  </div>
+                  <div class="cp__stat">
+                    <div class="cp__stat-k">Rating</div>
+                    <div class="cp__stat-v">5★</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="grid-2" style="margin-top:14px;">
+            <div class="card" data-reveal>
+              <h3 class="card__title">Awards</h3>
+              <div class="list">
+                <div class="list__item"><span class="dot" aria-hidden="true"></span><span>The Best Team Spirit Award — SICPC (Sri Eshwar College of Engineering), 2025</span></div>
+                <div class="list__item"><span class="dot" aria-hidden="true"></span><span>2nd Prize — Coding contest at Coimbatore Institute of Technology (CIT), 2024</span></div>
+              </div>
+            </div>
+            <div class="card" data-reveal>
+              <h3 class="card__title">Highlights</h3>
+              <div class="list">
+                <div class="list__item"><span class="dot" aria-hidden="true"></span><span>Consistent problem solving across multiple platforms</span></div>
+                <div class="list__item"><span class="dot" aria-hidden="true"></span><span>Strong focus on time/space efficiency and clean implementation</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <h2 class="section__title">Contact</h2>
+          <p class="section__subtitle">Want to collaborate or discuss an opportunity? Reach out.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card" data-reveal>
+            <h3 class="card__title">Get in touch</h3>
+            <div class="contact">
+              <button class="contact__row" type="button" data-copy value="arunramamoorthi05@gmail.com" data-copy-label="Email">
+                <span class="contact__k">Email</span>
+                <span class="contact__v">arunramamoorthi05@gmail.com</span>
+              </button>
+              <button class="contact__row" type="button" data-copy value="6374475344" data-copy-label="Phone">
+                <span class="contact__k">Phone</span>
+                <span class="contact__v">6374475344</span>
+              </button>
+              <a class="contact__row" href="#" data-ext-link="github">
+                <span class="contact__k">GitHub</span>
+                <span class="contact__v">https://github.com/2005arun</span>
+              </a>
+              <a class="contact__row" href="#" data-ext-link="linkedin">
+                <span class="contact__k">LinkedIn</span>
+                <span class="contact__v">www.linkedin.com/in/arun-r-s19102005</span>
+              </a>
+            </div>
+
+            <div class="note" role="status" aria-live="polite" data-toast></div>
+          </div>
+
+          <div class="card" data-reveal>
+            <h3 class="card__title">Quick message</h3>
+            <form class="form" data-contact-form>
+              <label class="field">
+                <span class="field__label">Your name</span>
+                <input class="field__input" name="name" type="text" autocomplete="name" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Your email</span>
+                <input class="field__input" name="email" type="email" autocomplete="email" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Message</span>
+                <textarea class="field__input" name="message" rows="5" required></textarea>
+              </label>
+              <button class="btn btn--primary" type="submit">Generate email</button>
+              <p class="muted small">This doesn’t send automatically. It opens your email app with the message.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
