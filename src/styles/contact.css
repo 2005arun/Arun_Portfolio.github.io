@@ -1,0 +1,77 @@
+/* ═══════════════════════════════════════════════════════════════
+   CONTACT SECTION
+   ═══════════════════════════════════════════════════════════════ */
+.contact-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .contact-layout-grid {
+    grid-template-columns: 0.95fr 1.25fr;
+    gap: 3rem;
+  }
+}
+
+.contact-info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-email-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-2xl);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  transition: border-color 0.3s ease;
+}
+
+.contact-email-card:hover {
+  border-color: var(--accent-border);
+}
+
+.contact-form-panel {
+  position: relative;
+  padding: 2rem;
+  border-radius: var(--radius-2xl);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 640px) {
+  .contact-form-panel {
+    padding: 2.5rem;
+  }
+}
+
+.contact-input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f1f5f9;
+  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.contact-input-field:focus {
+  border-color: var(--accent-border);
+  background: rgba(139, 92, 246, 0.05);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+.contact-input-field::placeholder {
+  color: var(--text-muted);
+}

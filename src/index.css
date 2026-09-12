@@ -1,0 +1,383 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════
+   DESIGN SYSTEM TOKENS
+   ═══════════════════════════════════════════════════════════════ */
+@theme {
+  --color-dark-bg:      #05050f;
+  --color-dark-surface: #0a0a1a;
+  --color-dark-card:    #0e0e1e;
+  --color-dark-border:  rgba(255, 255, 255, 0.07);
+  --color-accent-purple: #8b5cf6;
+  --color-accent-indigo: #6366f1;
+  --color-accent-blue:   #38bdf8;
+  --font-display: 'Outfit', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans:    'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:root {
+  /* ── Colors ── */
+  --bg:             #05050f;
+  --surface:        #0a0a1a;
+  --surface-hover:  #111125;
+  --surface-card:   #0e0e1e;
+  --text-primary:   #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted:     #64748b;
+  --border:         rgba(255, 255, 255, 0.08);
+  --border-hover:   rgba(255, 255, 255, 0.14);
+  --accent:         #8b5cf6;
+  --accent-muted:   rgba(139, 92, 246, 0.15);
+  --accent-border:  rgba(139, 92, 246, 0.3);
+  --accent-glow:    rgba(139, 92, 246, 0.2);
+
+  /* ── Layout ── */
+  --container-width: 1200px;
+  --section-spacing: clamp(5rem, 10vh, 8rem);
+  --section-gap:     clamp(3rem, 6vh, 5rem);
+
+  /* ── Radius ── */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESET & BASE
+   ═══════════════════════════════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* ── Section anchor offset for sticky navbar ── */
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CONTAINER — Consistent max-width across ALL sections
+   ═══════════════════════════════════════════════════════════════ */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECTION SPACING — Consistent vertical rhythm
+   ═══════════════════════════════════════════════════════════════ */
+.section-padding {
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TYPOGRAPHY
+   ═══════════════════════════════════════════════════════════════ */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.section-subheading {
+  color: var(--text-secondary);
+  font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
+  line-height: 1.7;
+  max-width: 40rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GRADIENT TEXT
+   ═══════════════════════════════════════════════════════════════ */
+.gradient-text {
+  background: linear-gradient(135deg, #c4b5fd, #a78bfa, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-warm {
+  background: linear-gradient(135deg, #f9a8d4, #c084fc, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.accent-highlight {
+  background: linear-gradient(135deg, #c4b5fd 0%, #818cf8 50%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GLASS UTILITIES
+   ═══════════════════════════════════════════════════════════════ */
+.glass-panel {
+  background: rgba(10, 10, 26, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+.glass-card {
+  background: rgba(14, 14, 30, 0.65);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-xl);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.glass-card:hover {
+  border-color: var(--accent-border);
+  box-shadow: 0 16px 48px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BUTTON SYSTEM
+   ═══════════════════════════════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  border: none;
+  line-height: 1;
+}
+
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #7c3aed, #6366f1);
+  color: white;
+  box-shadow: 0 4px 16px -4px rgba(124, 58, 237, 0.45), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.btn-primary:hover {
+  box-shadow: 0 6px 24px -4px rgba(124, 58, 237, 0.6), inset 0 1px 0 rgba(255,255,255,0.15);
+  background: linear-gradient(135deg, #8b5cf6, #818cf8);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-muted);
+  color: #c4b5fd;
+  border: 1px solid var(--accent-border);
+}
+.btn-secondary:hover {
+  background: rgba(139, 92, 246, 0.22);
+  border-color: rgba(139, 92, 246, 0.5);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLLBAR
+   ═══════════════════════════════════════════════════════════════ */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #7c3aed, #4f46e5);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover { background: linear-gradient(to bottom, #a855f7, #6366f1); }
+
+/* ═══════════════════════════════════════════════════════════════
+   SELECTION
+   ═══════════════════════════════════════════════════════════════ */
+::selection { background: rgba(139, 92, 246, 0.35); color: #fff; }
+
+/* ═══════════════════════════════════════════════════════════════
+   FOCUS VISIBLE — Keyboard accessibility
+   ═══════════════════════════════════════════════════════════════ */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BACKGROUND PATTERNS
+   ═══════════════════════════════════════════════════════════════ */
+.dot-grid-bg {
+  background-image: radial-gradient(circle, rgba(139, 92, 246, 0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECTION DIVIDER (kept for backward compatibility, now hidden)
+   ═══════════════════════════════════════════════════════════════ */
+.section-divider {
+  display: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   KEYFRAME ANIMATIONS
+   ═══════════════════════════════════════════════════════════════ */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(139, 92, 246, 0.2); }
+  50%       { box-shadow: 0 0 24px rgba(139, 92, 246, 0.4); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLL REVEAL — CSS-only for elements without Framer Motion
+   ═══════════════════════════════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PREFERS REDUCED MOTION — Accessibility
+   ═══════════════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SECTION LABEL (legacy utility — kept for compatibility)
+   ═══════════════════════════════════════════════════════════════ */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  margin-bottom: 0.85rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: var(--accent-muted);
+  border: 1px solid var(--accent-border);
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 8px #a78bfa;
+}

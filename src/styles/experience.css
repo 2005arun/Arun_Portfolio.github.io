@@ -1,0 +1,38 @@
+/* ═══════════════════════════════════════════════════════════════
+   EXPERIENCE SECTION — Enhanced UI & Glowing Aesthetics
+   ═══════════════════════════════════════════════════════════════ */
+.experience-section {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 5rem;
+}
+
+.experience-hero-card {
+  position: relative;
+  border-radius: 1.75rem;
+  background: rgba(14, 20, 36, 0.72);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  padding: 2.25rem 2.5rem;
+  box-shadow:
+    0 24px 60px -15px rgba(0, 0, 0, 0.7),
+    0 0 50px -10px rgba(168, 85, 247, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 768px) {
+  .experience-hero-card {
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+  }
+}
+
+.experience-hero-card:hover {
+  border-color: rgba(168, 85, 247, 0.55);
+  box-shadow:
+    0 30px 70px -15px rgba(0, 0, 0, 0.8),
+    0 0 65px 0 rgba(168, 85, 247, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  background: rgba(16, 23, 42, 0.8);
+}
