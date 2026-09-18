@@ -5,6 +5,7 @@ import {
   BriefcaseBusiness,
   Check,
   Code2,
+  Download,
   Mail,
   Menu,
   MoveUpRight,
@@ -100,7 +101,7 @@ export default function App() {
             <p className="kicker"><span className="live-dot" /> Available for backend & AI opportunities</p>
             <h1>Building systems<br /><em>people can trust.</em></h1>
             <p className="hero-intro">I&apos;m Arun, a backend-focused AI engineer who turns complicated ideas into clear, scalable products.</p>
-            <div className="hero-actions"><button className="button button-dark" onClick={() => navigate("work")}>Explore my work <MoveUpRight size={17} /></button><a className="text-link" href="mailto:arunramamoorthi05@gmail.com">Get in touch <ArrowUpRight size={15} /></a></div>
+            <div className="hero-actions"><button className="button button-dark" onClick={() => navigate("work")}>Explore my work <MoveUpRight size={17} /></button><a className="text-link" href="https://drive.google.com/file/d/10Cb8M8RHQewE9Gmc63CK1lQqWIjEPjof/view?usp=sharing" target="_blank" rel="noreferrer">Download resume <Download size={15} /></a></div>
             <div className="hero-meta"><span><strong>01</strong> / 03<br /><small>Years building</small></span><span><strong>07</strong><br /><small>Services in production</small></span><span><strong>1855</strong><br /><small>Max LeetCode rating</small></span></div>
           </motion.div>
           <motion.div className="portrait-wrap" initial={{ opacity: 0, scale: 0.94 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.12 }}>
